@@ -89,6 +89,9 @@ module Brcobranca
       # <b>OPCIONAL</b>: Endereço do beneficiário
       attr_accessor :cedente_endereco
 
+      # <b>OPCIONAL</b>: Detalhes do logo do beneficiário
+      attr_accessor :recipient_logo_details
+
       # Validações
       validates_presence_of :agencia, :conta_corrente, :moeda, :especie_documento, :especie, :aceite, :nosso_numero, :sacado, :sacado_documento, message: 'não pode estar em branco.'
       validates_numericality_of :convenio, :agencia, :conta_corrente, :nosso_numero, message: 'não é um número.', allow_nil: true
